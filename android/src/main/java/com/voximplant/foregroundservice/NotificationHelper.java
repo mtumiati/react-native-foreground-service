@@ -123,6 +123,7 @@ class NotificationHelper {
 
         notificationBuilder.setContentTitle(notificationConfig.getString("title"))
                 .setContentText(notificationConfig.getString("text"))
+                .setStyle(new Notification.BigTextStyle().bigText(notificationConfig.getString("text")))
                 .setPriority(priority)
                 .setContentIntent(pendingIntent);
 
